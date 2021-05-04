@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迴圈</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        let array = [{ name: "victor", age: 23 }, { name: "test", age: 24 }, { name: "test1", age: 25 }, { name: "test2", age: 26 }];
+
+        //利用for迴圈印出array
+        for (let i = 0; i < array.length; i++) {
+            console.log(array[i]);
+            //結果4個object
+        }
+        //for .....of練習
+        for(let item of array)
+        {
+            console.warn(item.name);
+            //item就是值 舉例item[0] = { name: "victor", age: 23 };
+            //和迴圈以黃色做區分
+        }
+
+        let obj = {
+            name:"Victor",
+            age:23,
+            Issingle:true,
+            sex:"boy",
+            weight:59,
+            height:173
+        } //宣告一個物件叫做obj
+
+        //for....in練習
+        for(let item in obj)
+        {
+            console.error(item);
+            //forin裡的item是物件的key
+            console.log(`${item}: ${obj[item]}`);
+            // 印出物件各key對應的值
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    
+
+
+    <script>
+       
+        let h1 = document.createElement("h1");
+        h1.innerText = "DOM" ;
+        document.body.appendChild(h1);
+        let div = document.createElement("div");
+        document.body.appendChild(div);
+        let ps = ["windows","document","html"];
+        let ls = ["Node","NodeList","HTMLCollection"];
+
+        ps.forEach((item,index) =>{
+            let p = document.createElement("p");
+            p.innerText = item; 
+            div.appendChild(p);
+        });
+
+      
+        // let ul = document.createElement("ul");
+        // document.body.appendChild(ul);
+        // ls.forEach((item,index) => {
+        //     let li = document.createElement("li");
+        //     li.innerText = item; 
+        //     ul.appendChild(li);
+        // });
+        
+        let ul = genul(ls);
+        document.body.appendChild(ul);
+        function genul(liarray){
+            let ul = document.createElement("ul");
+
+            liarray.forEach((item,index) => {
+                let li = document.createElement("li");
+                li.innerText = item; 
+                ul.appendChild(li);
+             });
+             return ul;
+        }
+
+    </script>
+</body>
+</html>

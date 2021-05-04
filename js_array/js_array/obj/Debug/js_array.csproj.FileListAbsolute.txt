@@ -1,0 +1,7 @@
+C:\Users\chwang\Desktop\javascript\js_array\js_array\bin\Debug\js_array.exe.config
+C:\Users\chwang\Desktop\javascript\js_array\js_array\bin\Debug\js_array.exe
+C:\Users\chwang\Desktop\javascript\js_array\js_array\bin\Debug\js_array.pdb
+C:\Users\chwang\Desktop\javascript\js_array\js_array\obj\Debug\js_array.csprojAssemblyReference.cache
+C:\Users\chwang\Desktop\javascript\js_array\js_array\obj\Debug\js_array.csproj.CoreCompileInputs.cache
+C:\Users\chwang\Desktop\javascript\js_array\js_array\obj\Debug\js_array.exe
+C:\Users\chwang\Desktop\javascript\js_array\js_array\obj\Debug\js_array.pdb

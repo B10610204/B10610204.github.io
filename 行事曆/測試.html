@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="test2">
+    <button id="btn">讀取</button>
+    <div class="box">
+
+    </div>
+
+    <script>
+        window.onload = function () {
+           test();
+            // console.warn(wishList)
+        }
+        let btn = document.getElementById("btn");
+
+
+        let box = document.querySelector(".box");
+
+        btn.addEventListener("click", function () {
+            var test = document.getElementById("test").value;
+            box.innerHTML = test;
+        })
+
+        function test() {
+            for (let i = 0; i < 3; i++) {
+                const wishList = []
+                wishList.push("1");
+                wishList.push("2");
+                localStorage.setItem(`${i}`, JSON.stringify(wishList))
+                console.warn(wishList)
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

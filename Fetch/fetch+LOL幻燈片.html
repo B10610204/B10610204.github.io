@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+       
+    </style>
+
+</head>
+
+
+<body>
+
+
+     <!-- 更改id並且給予看不見的css --> 
+    <div id="championsCarousel" class="carousel slide" data-ride="carousel" style = 'visibility:hidden'> 
+        <ol class=" carousel-indicators">    
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://img.ttshow.tw/images/media/uploads/2019/10/16/league-of-legends.jpg"
+                    class="d-block w-100" alt="..." data-interval='3000'>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>silder 1</h5>
+                    <p>說明文字</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="..." data-interval='3000'>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>silder 2</h5>
+                    <p>說明文字</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="..." data-interval='3000'>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>slider 3</h5>
+                    <p>說明文字</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="..." data-interval='3000'>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>slider 4</h5>
+                    <p>說明文字</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#championsCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#championsCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!-- 上一頁和下一頁的herf要改成幻燈片的ID -->
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+
+        let url = "https://ddragon.leagueoflegends.com/cdn/10.22.1/data/zh_TW/champion.json";
+        let nameArray = []; //所有英雄的key
+        let championsObject = {};
+
+
+        window.onload = function () {
+            fetch(url)
+                .then(response => response.json())
+                // response.json()回傳json物件
+                .then(result => {
+                    championsObject = result.data; //把資料縮到data開始
+                    // console.warn(championsObject)
+                    nameArray = Object.keys(championsObject); //取得data裡所有的key
+
+                    setSilders();
+
+                })
+                .catch(ex => {
+                    console.log(ex);
+                })
+                .finally(()=>{ 
+                    document.querySelector("#championsCarousel").style.visibility = 'visibile';
+                    //顯示幻燈片
+                });
+        }
+
+        function setSilders(){
+            let carouselItems = document.querySelectorAll(".carousel-item");
+            // console.log(carouselItems);
+            carouselItems.forEach((item,index) =>{
+                //設定data-inteval
+                let name = nameArray[index];// 取得英雄名字
+                let title = item.querySelector('h5'); //設定h5 :Aatrox-厄薩斯
+                title.innerHTML = championsObject[name].id + "-"  +championsObject[name].name;
+                let p = item.querySelector('p'); //設定內文
+                p.innerText = championsObject[name].blurb;
+                let images = item.querySelector('img'); //設定圖片
+                let imgUrl = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${nameArray[index]}_0.jpg`;
+                images.src = imgUrl;
+                console.warn(images)
+
+                item.setAttribute("data-interval","1000") //設定換圖片速度
+            });
+
+            // let images = document.querySelectorAll('.carousel-item img');
+            // images.forEach((img,index)=>{
+            //     let imgUrl = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${nameArray[index]}_0.jpg`;
+            //     img.src = imgUrl;
+            // })
+            // let titles = document.querySelectorAll('.carousel-item h5');
+            // titles.forEach((title,index) =>{
+            //     let name = nameArray[index];
+            //     title.innerHTML = championsObject[name].id + "-"  +championsObject[name].name;
+            // })
+            // let ps = document.querySelectorAll('.carousel-item p');
+            // ps.forEach((p,index) => {
+            //     let name = nameArray[index];
+            //     p.innerText = championsObject[name].blurb;
+            // })
+        }
+
+    </script>
+</body>
+
+</html>

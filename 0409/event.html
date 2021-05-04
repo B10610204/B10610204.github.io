@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .l1{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+        .l2{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+        .l3{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+        }        
+    </style>
+</head>
+<body>
+    <button id="btn1" onclick="one()">btn1</button>
+    <button id="btn2">btn2</button>
+    <button id="btn3">btn3</button>
+    <div class="l1">
+        <div class="l2">
+            <div class="l3"></div>
+        </div>
+    </div>
+
+    <script>
+
+        let l1 = document.getElementsByClassName("l1")[0];
+        let l2 = document.querySelector(".l2");
+        let l3 = document.querySelector(".l3");
+
+        l1.onclick = function(){
+            alert("我按了l1");
+            event.stopPropagation();
+        }
+
+        l2.onclick = function(){
+            alert("我按了l2");
+            event.stopPropagation();
+        }
+
+        l3.onclick = function(){
+            alert("我按了l3");
+            event.stopPropagation();
+        }
+
+
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+
+        btn2.onclick = two;
+
+        btn3.addEventListener("click",three);
+        btn3.addEventListener("click",two);
+        btn3.addEventListener("click",function(){
+            sayhello("天線寶寶");
+        });
+        btn2.onclick =function() {
+            sayhello("天線寶寶");
+        }
+        function one(){
+            alert("one");
+        }
+        
+        function two(){
+            alert("two");
+        }
+
+        function three(){
+            alert("three");
+        }
+        function sayhello(person)
+        {
+            alert(`${person} say hello`);
+        }
+
+    </script>
+</body>
+</html>

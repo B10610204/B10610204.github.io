@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class='jumbotron'>
+        <h1>動態建立Select Option下拉式選單</h1>
+    </div>
+    <!--     
+        <select id="citiesExample" name="cities">
+            <option value="taipei">台北</option>
+            <option value="taoyuan">桃園</option>
+            <option value="taichung">台中</option>
+        </select> 
+        -->
+
+    <select id='city' name='city'></select>
+    <select id='district' name='district'></select>
+    <input type='submit' value='提交資料' disabled>
+
+    <div id='msg'></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script>
+       
+
+
+
+
+        const citySelect = document.getElementById('city');
+        const districtSelect = document.getElementById('district');
+        const submitButton = document.querySelector('input[type=submit]');
+        const msg = document.getElementById('msg');
+
+        window.onload = createSelectOptions;
+        const url = "https://raw.githubusercontent.com/B10610204/filestorages/main/SimpleZipCode.json";
+        let zipcodeArray = [];
+
+
+        
+
+        function createSelectOptions() {
+            fetch(url)
+                .then(response => response.json())
+                .then(result => {
+                    
+                    zipcodeArray = result;
+                    console.warn(zipcodeArray);
+
+                    zipcodeArray.forEach((item, index) => {
+                        let option1 = document.createElement("option");
+                        option1.value = item.city;
+                        option1.text = item.city;
+                        citySelect.add(option1, null);
+                    });
+                    let option2 = document.createElement('option');
+                    option2.value = '';
+                    option2.text = '---請選擇縣市---';
+                    //option2.selected=true;
+                    option2.setAttribute('selected', '');    //預設選項
+                    citySelect.add(option2, 0);
+                    console.warn(zipcodeArray);
+                    // -------------------------第二層--------------------
+                    citySelect.onchange = citySelectedChange;
+
+
+                })
+        }
+
+
+        function citySelectedChange(event) {
+            //console.log(citySelect.selectedOptions[0]);
+
+            let cityValue = citySelect.selectedOptions[0].value;
+            let cityText = citySelect.selectedOptions[0].text;
+
+
+            //清除並重新建立District <select>
+            districtSelect.disabled = false;
+            districtSelect.innerHTML = '';
+            let option0 = document.createElement('option');
+            option0.value = '';
+            option0.text = '---請選擇行政區---';
+            districtSelect.add(option0, null);
+
+            //如果未選擇City則return
+            if (cityValue == '') {
+                districtSelect.disabled = true;
+                msg.innerHTML = '';
+                return;
+            }
+
+
+
+
+            zipcodeArray.forEach((city, index) => {
+                // debugger
+                if (city.city == cityValue) {
+                    city.district.forEach((district, index) => {
+                        console.log(district.district)
+                        let opt = document.createElement('option');
+                        opt.value = district.zipcode;
+                        opt.textContent = district.district;
+                        districtSelect.add(opt);
+                    })
+                }
+            })
+
+
+
+        }
+
+
+        districtSelect.addEventListener('change', function () {
+            let cityValue = citySelect.selectedOptions[0].value;
+            let cityText = citySelect.selectedOptions[0].text;
+            let districtValue = districtSelect.selectedOptions[0].value;
+            let districtText = districtSelect.selectedOptions[0].text;
+
+            if (cityValue != '' && districtValue != '') {
+                msg.innerText = citySelect.selectedOptions[0].text + ',' + districtSelect.selectedOptions[0].text;
+                submitButton.disabled = false;
+            }
+            else {
+                msg.innerHTML = '';
+                submitButton.disabled = true;
+            }
+        });
+
+        submitButton.addEventListener('click', submitData);
+
+        //Submit提交資料
+        function submitData() {
+            alert('你提交了資料');
+
+            //建立FormData
+            let formData = new FormData();
+            formData.append('city', citySelect.selectedOptions[0].value);
+            formData.append('district', districtSelect.selectedOptions[0].text);
+
+            //傳送FormData資料到指定的Server，將資料交由Server處理
+            let request = new XMLHttpRequest();
+            request.open("POST", "https://www.codemagic.com.tw");
+            request.send(formData);
+        }
+
+    </script>
+</body>
+
+</html>

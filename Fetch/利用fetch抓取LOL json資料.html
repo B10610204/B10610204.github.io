@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="msg">
+
+    </div>
+
+
+
+    <script type="module">
+        import { $g } from '../modules/helpers.js'
+
+
+        let url = "https://ddragon.leagueoflegends.com/cdn/10.22.1/data/zh_TW/champion.json";//資料網址
+        window.onload = function () {
+            fetchResource();
+        }
+
+        function fetchResource() {
+            fetch(url)
+                .then(response => response.text())//取得資料所有文字
+                .then(result => {
+                    $g("#msg").innerHTML = result; //把div裡的HTML用剛剛抓取的文字填滿
+                })
+        }
+    </script>
+
+</body>
+
+</html>

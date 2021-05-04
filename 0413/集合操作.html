@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+
+    <script>
+        var list = [
+            { item: "啤酒", type: "喝的" },
+            { item: "汽水", type: "喝的" },
+            { item: "火鍋", type: "吃的" },
+            { item: "燒烤", type: "吃的" },
+            { item: "冰淇淋", type: "吃的" }
+        ]
+
+        //找到第一個吃的
+        let r1 = list.find(x => x.type == "吃的");
+        console.log(r1.item);
+
+        //找到所有吃的
+        let r2 = list.filter(x => x.type == "吃的");
+        console.log(r2);
+
+        //找到冰淇淋在第幾個位置
+        let ice = list.find(x => x.item == "冰淇淋");
+        let r3 = list.indexOf(ice);
+        console.log(r3);
+        //位置方法2
+        let r3_1 = list.findIndex(x => x.item == "冰淇淋");
+        console.log(r3_1);
+
+        //生成新的list
+        let r4 = list.map(x => x.item)
+        console.log(r4);
+
+        //生成新的list2
+        let r5 = list.map(x => {
+            return {
+                Id: list.length - list.indexOf(x),
+                Name: x.item
+            }
+        });
+        console.log(r5);
+
+        //排序
+        var num = [9, 6, 4, 2, 1];
+        let r6 = num.sort();
+        console.log(r6);
+
+        //排序2 sort依照字首排序
+        var num2 = [10000, 20, 101, 1000, 1];
+        var r7 = num2.sort();
+        console.warn(r7);
+
+        //排序2 應該要自訂義判斷
+        var num2_2 = [10000, 20, 101, 1000, 1];
+        var r7 = num2_2.sort((a, b) => a - b);
+        console.error(num2_2); //sort會改變原本集合
+
+        //排序3 拿r5 id 排序
+        var r8 = r5.sort((a, b) => a.Id - b.Id);
+        console.table(r8);
+
+        //12生肖
+      
+        var animal = ["豬", "龍", "鼠", "狗", "羊", "雞", "馬"];
+        animal.sort((a,b) => {
+            var curAni = ["鼠","牛","虎","兔","龍","蛇","馬","羊","猴", "雞","狗", "豬",];
+            return curAni.indexOf(a) - curAni.indexOf(b);
+        })
+        console.log(animal);
+
+
+        // var list = [
+        //     { item: "啤酒", type: "喝的" },
+        //     { item: "汽水", type: "喝的" },
+        //     { item: "火鍋", type: "吃的" },
+        //     { item: "燒烤", type: "吃的" },
+        //     { item: "冰淇淋", type: "吃的" }
+        // ]
+
+        //groupBy擴充方法
+        Array.prototype.groupBy = function(prop){
+            return this.reduce(function(groups,item){
+                const val = item[prop];
+                // { item: "啤酒", type: "喝的" }
+                groups[val] = groups[val] || []; //如果原本的key沒有就建一個新的陣列
+                groups[val].push(item);
+                return groups
+            },{});
+        };
+
+        //用TYPE分組
+        var r9 = list.groupBy("type");
+        console.log(r9);
+
+    </script>
+</body>
+
+</html>

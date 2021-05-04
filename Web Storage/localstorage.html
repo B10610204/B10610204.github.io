@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        localStorage.setItem("name","kevin");
+        localStorage.setItem("email","iop013241@gmail.com");
+        let name = localStorage.getItem("name");
+        let email = localStorage.getItem("email");
+        document.getElementById("container").innerText = name + ',' + email
+        // 找不到的值，回傳null
+        let test = localStorage.getItem("test");
+        console.warn(test);
+        localStorage.removeItem("email");
+        
+    </script>
+</body>
+</html>

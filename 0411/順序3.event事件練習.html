@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .l1{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+        .l2{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+        .l3{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+        }        
+    </style>
+</head>
+<body>
+    <button id="btn1" onclick="one()">btn1</button>
+    <button id="btn2">btn2</button>
+    <button id="btn3">btn3</button>
+    <div class="l1">
+        <div class="l2">
+            <div class="l3"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        let btn1 = document.getElementsByClassName("btn1")[0];
+        //getElementsByClassName會回傳找到所有較btn1類別的DOM元素，並回傳陣列所以要給索引值[0]表示找到的第一個
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.querySelector("#btn3");
+        //querySelector選擇方法要符合css條件
+
+        function one(){
+            alert("透過直接給予onclick屬性，當btn1被點擊直接觸發one方法");
+        }
+
+        btn2.onclick = function(){
+            Two();
+        }
+        function Two(){
+            alert("透過找到btn2DOM元素，並在給予onclick事件觸發Two方法")
+        }
+        //第3種給予監聽器，透過監聽器判斷是不是click事件，觸發Three方法
+        btn3.addEventListener("click",function(){
+            Three("天線寶寶");
+        })
+        function Three(input){
+            alert(`${input}說早安`);
+        }
+
+
+        //區塊重疊事件會一起觸發
+        let l1 = document.getElementsByClassName("l1")[0];
+        let l2 = document.querySelector(".l2");
+        let l3 = document.querySelector(".l3");
+
+
+        l1.addEventListener("click",function(){
+            alert("我按了l1");
+            event.stopPropagation();
+        });
+
+        l2.addEventListener("click",function(){
+            alert("我按了l2");
+            event.stopPropagation();//透過這個指令避免按l2也觸發l1事件
+        });
+
+        l3.addEventListener("click",function(){
+            alert("我按了l3");
+            // event.stopPropagation(); 沒有這行按l3會同時觸發l2和l1事件
+        });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const url = "https://raw.githubusercontent.com/B10610204/filestorages/main/SimpleZipCode.json"
+        let promisefetch = fetch(url);  
+        // console.log(promisefetch)
+
+        promisefetch
+            .then(response =>response.json())
+            .then(result =>{
+                console.log(typeof result);
+                console.log(result);
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+    <div></div>
+    
+
+    <script type="module">
+        import { $g as selector,$genul,getrandom } from '../modules/helpers.js';
+        let h1 = selector('h1');
+        h1.innerText ="測試";
+        let p = selector('p');
+        p.innerHTML = "我是P"
+
+        let ls = ["Node","NodeList","HTMLCollection"];
+        let ul = $genul(ls);
+        document.body.appendChild(ul);
+
+
+        document.querySelector("body>div").innerHTML = getrandom(1,100);
+    </script>
+</body>
+</html>

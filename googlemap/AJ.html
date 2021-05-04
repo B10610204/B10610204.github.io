@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id='btn1'>取得104資料</button>
+    <button id='btn2'>取得105資料</button>
+    <button id='btn3'>顯示106資料</button>
+    <div id="msg"></div>
+
+    <script src="water.js"></script>
+    <script src="City.js"></script>
+    <script>
+
+        let msg = document.getElementById("msg");
+
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let Year = [104,105,106,107,108,109];
+        let data_104 = [];
+        let data_105 = [];
+        let data_106 = [];
+
+        btn1.addEventListener("click", Getdata104);
+        btn2.addEventListener("click", Getdata105);
+        btn3.addEventListener("click", Getdata106);
+
+        function getcity(){
+            city.forEach((water, index) => {
+                if (water.Year == 104) {
+                    data_104.push(water);
+                }
+
+            });
+            console.warn(data_104);
+        }
+
+    </script>
+</body>
+
+</html>

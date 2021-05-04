@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>setTimeout() - 定時器</h1>
+    <button onclick="Start()">Start</button>
+    <button onclick="Stop()">Stop</button>
+
+
+
+    <script>
+        //建立顏色陣列
+        const color = ["red","blue","orange","green"];
+        //亂數產生的方法
+        function getRandom(min,max){
+            return Math.floor(Math.random()*max+min);
+            // Math.floor是無條件去掉小數
+            // Math.random會產生介於0~1之間的小數
+        }
+
+        let timeoutId;
+        let body = document.querySelector("body");
+
+        function Start(){
+            timeoutId = setTimeout(() => {
+                //設定背景顏色，並透過getrandom隨機產生
+                body.style.backgroundColor = color[getRandom(0,4)];
+        },1000)}
+
+        function Stop(){
+            //把timeoutId清除
+            clearTimeout(timeoutId);
+        }
+      
+
+    </script>
+</body>
+
+</html>
