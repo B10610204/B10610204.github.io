@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+    /* ----導覽列------ */
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .bg-gray {
+        background-color: rgb(248, 248, 248);
+    }
+
+    .grow-0 {
+        flex-grow: 0;
+    }
+
+    #Homepage-logo {
+        width: 135px;
+        height: 33px;
+    }
+
+    #Recruit-logo {
+        width: 65px;
+        height: 43px;
+    }
+
+    #nav-space {
+        width: 200px;
+    }
+
+    #user-menu {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        /* background-color: khaki; */
+
+    }
+
+    #user-logo {
+        border-radius: 30px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .user-logo-content {
+        left: -100px
+    }
+
+    .user-notice {
+        left: -50px
+    }
+
+    /* ----導覽列------ */
+    /* 頁尾 */
+    .footer {
+
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 6.5%);
+
+    }
+
+    .footer-block {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .footer-h3 {
+        font-size: 16px;
+        color: #00bea4;
+    }
+
+    .footer-content {
+        font-size: 12px;
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .footer-btn {
+        width: 100%;
+        text-align: start;
+        background-color: white;
+        color: #000000;
+    }
+
+    #footer-space {
+        width: 130px;
+        display: inline-block;
+    }
+
+    /* 頁尾 */
+    /* 第一塊 */
+    .search-content {
+        font-size: 28px;
+        font-family: sans-serif;
+    }
+
+    .search-half {
+        position: relative;
+        color: rgb(0, 190, 164);
+
+    }
+
+    .search-half::before {
+        content: "";
+        background-color: rgb(255, 238, 88);
+        z-index: -1;
+        position: absolute;
+        height: 20px;
+        width: 100%;
+        top: 15px;
+        left: 0;
+    }
+
+    .search-input {
+        height: 40px;
+        width: 246px;
+        position: relative;
+    }
+
+    .search-input:focus-visible {
+        outline: none;
+    }
+
+    .search-btn {
+        height: 40px;
+    }
+
+    .search-3 {
+        max-width: 23%;
+    }
+
+    .search-a {
+        text-decoration: none;
+        font-size: 8px;
+        color: #00bea4;
+        padding: 2px 2px;
+        background-color: rgba(46, 225, 179, 0.1);
+        border-radius: 16px;
+        margin: 6px 0;
+    }
+
+    #ug-pic {
+        display: block;
+        width: 270px;
+        height: 244;
+    }
+
+    .search-right {
+        position: relative;
+    }
+
+    #search-right-pic {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 50%;
+        z-index: -2;
+    }
+
+    #search-right-leftbottom-pic {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    #search-right-a-pic {
+        position: absolute;
+        left: 80px;
+        top: 50px;
+        width: 30%;
+        height: 40%;
+        z-index: 0;
+    }
+
+    #mascot {
+        position: absolute;
+        left: 200px;
+        top: 100px;
+        width: 30%;
+        height: 40%;
+        z-index: 1;
+    }
+
+    #play {
+        position: absolute;
+        left: 350px;
+        top: 200px;
+        width: 20%;
+        height: 20%;
+        z-index: 1;
+    }
+
+    /* 第一塊 */
+    /* 第二塊 */
+    .advertising-text {
+        font-size: 18px;
+    }
+
+    #advertising-span {
+        color: #00bea4;
+    }
+
+    /* 第二塊 */
+    /* 延伸閱讀 */
+    .reading{
+        background-color: #f3f3f1;
+    }
+    .reading-h4 {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.65);
+        ;
+    }
+
+    .reading-8 {
+        max-width: 64%;
+    }
+    .reading-pic{
+        width: 100%;
+    }
+    .reading-h5{
+        font-size: 17px;
+    }
+    .reading-date{
+        color: rgba(0, 0, 0, 0.43);
+        font-size: 12px;
+    }
+    .reading-more{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.63);
+        font-size: 10px;
+        padding: 4px 8px;
+        border-radius: 16px;
+        background-color: white;
+    }
+    /* 延伸閱讀 */
+    @media screen and (max-width:992px) {
+
+        /* 頁尾 */
+        .footer-block {
+            order: 2;
+        }
+
+        .footer-last-block {
+            order: 1;
+        }
+
+        #footer-space {
+            width: 290px;
+        }
+
+        /* 頁尾 */
+        #ug-pic {
+            display: none;
+            width: 270px;
+            height: 244;
+        }
+
+        /* 第一塊 */
+        .search-3 {
+            max-width: 100%;
+        }
+
+        .search-content {
+            text-align: center;
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-a-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 第一塊 */
+        /* 延伸閱讀 */
+        .reading-8{
+            max-width: 100%;
+        }
+        /* 延伸閱讀 */
+    }
+</style>
+
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+        <div class="nav-log-wrap">
+            <a href="#"><img id="Homepage-logo" src="https://hahow.in/static/media/logo-black.59fdbe30.svg" alt=""></a>
+            <a href="#"><img id="Recruit-logo" src="https://hahow.in/static/images/joinus/2018hiring.svg" alt=""></a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 下拉選單有2層 -->
+        <div class="collapse navbar-collapse  grow-0" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-th-large"></i>
+                        探索課程
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="dropright">
+                            <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown">
+                                C#
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Posts
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Groups
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Projects
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Files
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Subscribers
+                                </a>
+                            </div>
+                        </li>
+                        <li class="dropright">
+                            <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown">
+                                CSS
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Posts
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Groups
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Projects
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Files
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Subscribers
+                                </a>
+                            </div>
+                        </li>
+                        <li class="dropright">
+                            <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown">
+                                Javascript
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Posts
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Groups
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Projects
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Files
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Subscribers
+                                </a>
+                            </div>
+                        </li>
+                        <li class="dropright">
+                            <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown">
+                                Mvc
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Posts
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Groups
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Projects
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Files
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Subscribers
+                                </a>
+                            </div>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </ul>
+                </li>
+                <!-- 沒有下拉選單 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-pencil-alt"></i>我要開課</a>
+                </li>
+            </ul>
+            <!-- 搜尋列 -->
+            <form class="form-inline my-2 my-lg-0 ">
+                <i class="fas fa-search px-2"></i>
+                <input class="form-control mr-sm-2" type="search" placeholder="課程搜尋" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <!-- 移動距離就創一個空的div -->
+        <!-- <div id="nav-space"></div> -->
+        <!-- <div id="nav-space"></div> -->
+
+        <div class="collapse navbar-collapse  grow-0" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">我的課程</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        123 <br> 123 <br> 123 <br>123 <br>123 <br>123 <br>123 <br>123 <br>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="far fa-bell"></i>
+                    </a>
+                    <div class="dropdown-menu user-notice" aria-labelledby="navbarDropdown">
+                        123 <br> 123 <br> 123 <br>123 <br>123 <br>123 <br>123 <br>123 <br>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div id="user-menu"><img src="me.jpg" alt="" id="user-logo"></div>
+                    </a>
+                    <div class="dropdown-menu user-logo-content" aria-labelledby="navbarDropdown">
+                        123 <br> 123 <br> 123 <br>123 <br>123 <br>123 <br>123 <br>123 <br>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 導覽列 -->
+
+    <!-- 第一塊 -->
+    <div class="container-fuild">
+        <div class="row justify-content-center m-0">
+            <div class="col-lg-3 search-3">
+                <h1 class="pt-5 search-content">
+                    最有趣的<span class="search-half">線上課程平台</span><br>
+                    學那些學校不會教的事
+                </h1>
+                <form class="form-inline my-2 my-lg-0 d-flex search-form">
+                    <input class="bg-gray border-0 m-0 search-input" type="search" placeholder="今天想學習什麼?"
+                        aria-label="Search">
+                    <button class="search-btn"> <i class="fas fa-search px-2"></i></button>
+                </form>
+                <div class="search-a-wrap my-2">
+                    <a href="#" class="search-a d-inline-block">優惠此時此課</a>
+                    <a href="#" class="search-a d-inline-block">國際化人才</a>
+                    <a href="#" class="search-a d-inline-block">吳寶春</a>
+                    <a href="#" class="search-a d-inline-block">理財進擊之路</a>
+                    <a href="#" class="search-a d-inline-block">免費資產配置講座</a>
+                </div>
+            </div>
+            <div class="col-lg-5 search-right p-0">
+                <img id="search-right-leftbottom-pic" src="右圖左下.jpg" alt="">
+                <img id="search-right-pic" src="右圖底部.jpg" alt="">
+                <a href="#"><img id="search-right-a-pic" src="超連結圖.jpg" alt=""></a>
+                <img id="mascot" src="吉祥物.jpg" alt="">
+                <img id="play" src="播放圖.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="pic-wrap">
+        <img id="ug-pic" src="醜圖.jpg" alt="">
+    </div>
+    <!-- 第一塊 -->
+    <!-- 第二塊 -->
+    <div class="container-fuild">
+        <div class="row justify-content-center text-center m-0">
+            <div class="col-8 ">
+                <h2 class="advertising-text">每周嚴選推薦</h2>
+            </div>
+            <div class="col-8 my-1">
+                <h3 class="advertising-text">
+                    <span>一些很棒的</span>
+                    <span id="advertising-span" class="mx-2">活動消息</span>
+                    <span>走過路過別錯過</span>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <!-- 第二塊 -->
+
+
+    <!-- 延伸閱讀 -->
+    <div class="container-fuild reading">
+        <div class="row justify-content-center m-0">
+            <div class="col-lg-8 reading-8">
+                <h4 class="reading-h4 my-3">延伸閱讀</h4>
+            </div>
+            <div class="col-lg-8 reading-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="reading-pic" src="圖片/延伸閱讀圖片1.jpg" alt="">
+                        <h5 class="reading-h5 m-0">零基礎也能自學法文 —— 從文字到 Podcast、影片，免費法語自學</h5>
+                        <span class="d-block reading-date my-2">Dec 10, 2020</span>
+                        <p class="reading-date m-0">語言自學達人 Chihya 繼兩年前自學德文後，又靠著自學建立了法文聽說讀寫的基礎。這篇文章會分享她自學法文的經驗，並提供「以中文、英文、或法文學習法文」的多種教材，如果你也正在找法文</p>
+                        <a class="reading-more" href="#">閱讀更多</a>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="reading-pic" src="圖片/延伸閱讀圖片2.jpg" alt="">
+                        <h5 class="reading-h5 m-0">【2021】上升星座運勢：安心之法與人生發展策略</h5>
+                        <span class="d-block reading-date my-2">Dec 30, 2020</span>
+                        <p class="reading-date m-0">面對 2020 年的不確定性，很多人心中的不安全感越來越深重。星象雖然會影響人世間的吉凶禍福，斗轉星移所產生的外在事件，人類可能無法全然控制，但是你可以決定你的「心」要如何去應對未來</p>
+                        <a class="reading-more" href="#">閱讀更多</a>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="reading-pic" src="圖片/延伸閱讀圖片3.jpg" alt="">
+                        <h5 class="reading-h5 m-0">資深聲音培訓師周震宇 —— 聲音反映出人的內在，而溝通是一生的</h5>
+                        <span class="d-block reading-date my-2">Jan 8, 2021</span>
+                        <p class="reading-date m-0">「聲音反映出人的內在，而溝通是一生的自我覺察。」這是聲音訓練師周震宇亟欲傳達的核心概念。在聲波的交會當中，人們建立交集、共識，進而生長成為有意義的關係。你的每一次開口，也可</p>
+                        <a class="reading-more" href="#">閱讀更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- 延伸閱讀 -->
+
+    <!-- 底部 -->
+    <div class="container-fuild footer">
+        <div class="row justify-content-center">
+            <div class="col-lg-2 footer-block p-0">
+                <h3 class="footer-h3">關於</h3>
+                <ul>
+                    <li><a href="#" class="footer-content">關於我們</a></li>
+                    <li><a href="#" class="footer-content">加入Hahow</a></li>
+                    <li><a href="#" class="footer-content">使用者條款</a></li>
+                    <li><a href="#" class="footer-content">服務契約</a></li>
+                    <li><a href="#" class="footer-content">隱私權政策</a></li>
+                    <li><a href="#" class="footer-content">功能更新</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 footer-block p-0">
+                <h3 class="footer-h3">幫助</h3>
+                <ul>
+                    <li><a href="#" class="footer-content">企業學習方案</a></li>
+                    <li><a href="#" class="footer-content">異業合作洽談</a></li>
+                    <li><a href="#" class="footer-content">常見問題</a></li>
+                    <li><a href="#" class="footer-content">課程許願池</a></li>
+                    <li><a href="#" class="footer-content">兌換課程</a></li>
+                    <li><a href="#" class="footer-content">線上課程禮物卡</a></li>
+                    <li><a href="#" class="footer-content">填課程問卷拿優惠</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 footer-block p-0">
+                <h3 class="footer-h3">追蹤動態</h3>
+                <ul>
+                    <li><a href="#" class="footer-content">Facebook</a></li>
+                    <li><a href="#" class="footer-content">Instagram</a></li>
+                    <li><a href="#" class="footer-content">LINE</a></li>
+                    <li><a href="#" class="footer-content">YouTube</a></li>
+                    <li><a href="#" class="footer-content">Blog</a></li>
+
+                </ul>
+            </div>
+            <div class="col-lg-2 footer-block footer-last-block p-0">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle footer-btn" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>輸入地點</span>
+                        <!-- <span id="footer-space"></span> -->
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item btn-item-first" href="#">輸入地點</a>
+                        <a class="dropdown-item" href="#">TW&nbsp;台灣 &nbsp;新台幣(&nbsp;TWD&nbsp;)</a>
+                        <a class="dropdown-item" href="#">HK&nbsp;香港 &nbsp;港幣幣(&nbsp;HKD&nbsp;)</a>
+                        <a class="dropdown-item" href="#">MY&nbsp;馬來西亞 &nbsp;林吉特(&nbsp;MYR&nbsp;)</a>
+                        <a class="dropdown-item" href="#">US&nbsp;美國 &nbsp;美元(&nbsp;USD&nbsp;)</a>
+                        <a class="dropdown-item" href="#">JP&nbsp;日本 &nbsp;日圓(&nbsp;JPY&nbsp;)</a>
+                        <a class="dropdown-item" href="#">CN&nbsp;中國 &nbsp;人民幣(&nbsp;CNY&nbsp;)</a>
+                        <a class="dropdown-item" href="#">MO&nbsp;澳門 &nbsp;澳門幣(&nbsp;MOP&nbsp;)</a>
+                        <a class="dropdown-item" href="#">SG&nbsp;新加坡 &nbsp;新幣(&nbsp;SGD&nbsp;)</a>
+                        <a class="dropdown-item" href="#">AU&nbsp;澳洲 &nbsp;澳幣(&nbsp;AUD&nbsp;)</a>
+                        <a class="dropdown-item" href="#">CU&nbsp;加拿大 &nbsp;加幣(&nbsp;CAD&nbsp;)</a>
+                    </div>
+                </div>
+                <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle footer-btn" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>語言選擇</span>
+                        <!-- <span id="footer-space"></span> -->
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">繁體中文</a>
+                        <a class="dropdown-item" href="#">簡體中文</a>
+                    </div>
+                    <span class="pb-3 pt-2 footer-content">Hahow 好學校 © All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var Dropdowns = function () {
+            var t = $(".dropup, .dropright, .dropdown, .dropleft")
+                , e = $(".dropdown-menu")
+                , r = $(".dropdown-menu .dropdown-menu");
+            $(".dropdown-menu .dropdown-toggle").on("click", function () {
+                var a;
+                return (a = $(this)).closest(t).siblings(t).find(e).removeClass("show"),
+                    a.next(r).toggleClass("show"),
+                    !1
+            }),
+                t.on("hide.bs.dropdown", function () {
+                    var a, t;
+                    a = $(this),
+                        (t = a.find(r)).length && t.removeClass("show")
+                })
+        }()
+    </script>
+</body>
+
+</html>
