@@ -129,7 +129,7 @@
 
     .search-input {
         height: 40px;
-        width: 246px;
+        width: 85%;
         position: relative;
     }
 
@@ -139,6 +139,7 @@
 
     .search-btn {
         height: 40px;
+        width: 15%;
     }
 
     .search-3 {
@@ -276,17 +277,246 @@
     #try-watch {
         background-color: rgb(243, 243, 241);
     }
-    .trywatch-h2{
+
+    .trywatch-h2 {
         font-size: 18px;
         color: rgba(0, 0, 0, 0.65);
     }
-    .trywatch-text{
+
+    .trywatch-text {
         font-size: 14px;
     }
-    #trywatch-span{
+
+    #trywatch-span {
         color: #00bea4;
     }
+
     /* 第三塊 */
+    /* 好學生評論 */
+    #studentsay-span {
+        font-size: 18px;
+        color: #00bea4;
+    }
+
+    .comment {
+        font-size: 14px;
+        height: 300px;
+        background-color: white;
+        position: relative;
+    }
+
+    #student-say {
+        background-color: #e6eff0;
+    }
+
+    .comment-top-img {
+        height: 15px;
+        position: absolute;
+        top: 5px;
+        left: 24px;
+    }
+
+    .comment-bot-img {
+        height: 15px;
+        position: absolute;
+        bottom: 5px;
+        right: 24px;
+    }
+
+    .comment-a {
+
+        position: absolute;
+        bottom: 5px;
+        right: 50px;
+        text-decoration: none;
+        color: #00bea4;
+    }
+
+    /* 好學生評論 */
+    /* 貓頭鷹 */
+    .item {
+
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+    }
+
+    .owl-carousel .owl-item,
+    .owl-carousel .owl-wrapper {
+        -webkit-transform: none
+    }
+
+    .owl-nav {
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .owl-prev {
+        font-size: 50px !important;
+
+    }
+
+    .owl-next {
+        font-size: 50px !important;
+
+    }
+
+    /* 貓頭鷹 */
+    /* 課程推薦 */
+    .course-text {
+        font-size: 14px;
+    }
+
+    .course-8 {
+        max-width: 64%;
+    }
+
+    /* 課程推薦 */
+    /* 字卡 */
+
+
+    .card-txt {
+        padding: 14px 20px;
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -82%;
+        visibility: hidden;
+        background-color: white;
+        z-index: 2;
+        font-size: 14px;
+        border: 3px solid rgb(243, 243, 241);
+        border-radius: 12px;
+    }
+
+    .card-txt h3 {
+        font-size: 14px;
+    }
+
+    .card-txt p {
+        font-size: 12px;
+    }
+
+    .card-txt-btn {
+        position: relative;
+        bottom: -60px;
+        left: 0;
+    }
+
+    .card-txt-btn button {
+        border-color: #00bea4;
+        color: #00bea4;
+    }
+
+    .item:hover .card-txt {
+        visibility: visible;
+    }
+
+
+
+    .card-txt:hover {
+        visibility: visible;
+    }
+
+    /* 字卡 */
+    /* 哥哥卡片 */
+    .card-h4 {
+        font-size: 15px;
+
+    }
+
+    .card-h4-wrap {
+        width: 100%;
+        height: 40px;
+    }
+
+    .backgroundTape {
+        font-size: 14px;
+        width: 50%;
+        height: 25px;
+        line-height: 25px;
+        right: -15%;
+        top: 20px;
+        transform: rotate(45deg);
+    }
+
+    .bg-hahow-dark-orange {
+        background: #00bea4;
+    }
+
+    .card:hover img {
+        transform: scale(1.2);
+    }
+
+    .backgroundBookmark {
+        background-color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        bottom: -50%;
+        left: 5%;
+        transition: 0.5s;
+        line-height: 2.5;
+    }
+
+    .backgroundBookmark:hover {
+        background-color: #fa8b00;
+
+    }
+
+    .backgroundBookmark:hover i {
+        color: white;
+    }
+
+    .hahow-orange {
+        color: #fa8b00;
+    }
+
+    .card:hover .backgroundBookmark {
+        bottom: 53%;
+    }
+
+    .fa-bookmark {
+        transform: scale(1.2);
+    }
+
+    .card-RM {
+        color: #00bea4;
+    }
+
+    .card-divide {
+        height: 2px;
+        margin: 16px 0px;
+        background-color: rgb(243, 243, 241);
+    }
+
+    .card-logo {
+        background-image: url(圖片/太陽.jpg);
+        width: 72px;
+        height: 72px;
+        flex: 0 0 auto;
+    }
+
+    .card-Explan {
+        max-width: 70%;
+        max-height: 55px;
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .card-content {
+        display: flex;
+    }
+
+    /* 哥哥卡片 */
 
     @media screen and (max-width:992px) {
 
@@ -337,13 +567,31 @@
 
         /* 延伸閱讀 */
         /* 第一塊輪盤 */
-    
+
 
         .item>img {
             height: 200px;
         }
-        /* 第一塊輪盤 */
 
+        /* 第一塊輪盤 */
+        /* 好學生評論 */
+        .comment {
+            height: 150px;
+        }
+
+        /* 好學生評論 */
+        /* 課程精選 */
+        .item:hover .card-txt {
+            visibility: hidden;
+        }
+        .card-txt:hover {
+            visibility: hidden;
+        }
+        .card:hover .backgroundBookmark {
+        bottom: 63%;
+         }
+
+        /* 課程精選 */
 
     }
 </style>
@@ -542,7 +790,7 @@
                 <img id="search-right-pic" src="右圖底部.jpg" alt="">
                 <a href="#"><img id="search-right-a-pic" src="超連結圖.jpg" alt=""></a>
                 <img id="mascot" src="吉祥物.jpg" alt="">
-                <img id="play" src="播放圖.svg" alt="">
+                <img id="play" src="/播放圖.svg" alt="">
             </div>
         </div>
     </div>
@@ -551,7 +799,7 @@
     </div>
     <!-- 第一塊 -->
     <!-- 第二塊 -->
-    <div class="container-fuild">
+    <div class="container-fuild py-3">
         <div class="row justify-content-center text-center m-0">
             <div class="col-8 ">
                 <h2 class="advertising-text">每周嚴選推薦</h2>
@@ -568,7 +816,7 @@
     <!-- 第二塊 -->
 
     <!-- 輪盤一 -->
-    <div class="owl-carousel owl-theme">
+    <div class="owl-carousel owl-theme pb-5">
         <a href="#">
             <div class="item">
                 <img src="https://storage.googleapis.com/hh-static/banner_2021hahowday_20210519/2021hahowday_l.png"
@@ -631,8 +879,521 @@
         </div>
     </div>
     <!-- 第3塊 -->
+    <!-- 課程精選 -->
+    <div class="container-fuild py-5">
+        <div class="row justify-content-center text-center m-0">
+            <div class="col-8 ">
+                <h2 class="advertising-text">Hahow 精選好課程</h2>
+            </div>
+            <div class="col-8 my-1">
+                <h3 class="course-text">
+                    <span>精挑細選了一些很棒的課程</span>
+                    <span id="advertising-span" class="mx-2">推薦給你</span>
+                </h3>
+            </div>
+            <div class="col-8 course-8">
+                <div class="owl-carousel  owl-theme">
+
+                    <div class="item">
+                        <div class="card  position-relative overflow-hidden" style="width: 100%; ">
+                            <img
+                                src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
+                            <div class="backgroundBookmark position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-h4-wrap">
+                                    <h4 class="card-h4">使用HTML，CSS開發一個網站</h4>
+                                </div>
+                                <div class="text-right card-RM">RM 443.30</div>
+                                <div class="card-divide"></div>
+                                <div class="card-content">
+                                    <div class="card-logo"></div>
+                                    <div class="card-Explan">早期的 HTML 代碼，將網頁中風格 (style) 相關的設定直接內嵌在 HTML
+                                        標籤中，但這樣的做法很難維護網頁，而 CSS 的作用，就是將風格的部分抽離出來，放在獨立的設定檔中。透過修改 CSS
+                                        命令稿，可以同時更動頁面上數個網頁元素的風格，使得網頁維護更容易。</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bg-hahow-dark-orange text-center text-white backgroundTape">
+                                上課囉
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                        <div class="card-txt">
+                            <h3>課程簡介</h3>
+                            <div>
+                                <i class="fas fa-hourglass-start"></i>
+                                <span>課程3小時46分</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-book"></i>
+                                <span>4章節15單元</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-user-tag"></i>
+                                <span>461位同學</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-copy"></i>
+                                <span>2份作業</span>
+                            </div>
+                            <h3 class="my-2">你可以學到的東西</h3>
+                            <p>- 透過電繪的便利性，了解每一種場景透視法產生的原因，讓畫場景時透視更容易上手。123<br>
+                                - 習得一點透視、兩點透視、三點透視、等角透視、魚眼透視⋯⋯以及各種好玩的透視練習法。</p>
+                            <div class="d-flex justify-content-center card-txt-btn">
+                                <a href="#" class="w-100">
+                                    <button class="w-100 bg-white">瞭解課程內容</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+
+                    </div>
+                    <div class="item">
+                        <div class="card  position-relative overflow-hidden" style="width: 100%; ">
+                            <img
+                                src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
+                            <div class="backgroundBookmark position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-h4-wrap">
+                                    <h4 class="card-h4">使用HTML，CSS開發一個網站</h4>
+                                </div>
+                                <div class="text-right card-RM">RM 443.30</div>
+                                <div class="card-divide"></div>
+                                <div class="card-content">
+                                    <div class="card-logo"></div>
+                                    <div class="card-Explan">早期的 HTML 代碼，將網頁中風格 (style) 相關的設定直接內嵌在 HTML
+                                        標籤中，但這樣的做法很難維護網頁，而 CSS 的作用，就是將風格的部分抽離出來，放在獨立的設定檔中。透過修改 CSS
+                                        命令稿，可以同時更動頁面上數個網頁元素的風格，使得網頁維護更容易。</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bg-hahow-dark-orange text-center text-white backgroundTape">
+                                上課囉
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                        <div class="card-txt">
+                            <h3>課程簡介</h3>
+                            <div>
+                                <i class="fas fa-hourglass-start"></i>
+                                <span>課程3小時46分</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-book"></i>
+                                <span>4章節15單元</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-user-tag"></i>
+                                <span>461位同學</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-copy"></i>
+                                <span>2份作業</span>
+                            </div>
+                            <h3 class="my-2">你可以學到的東西</h3>
+                            <p>- 透過電繪的便利性，了解每一種場景透視法產生的原因，讓畫場景時透視更容易上手。123<br>
+                                - 習得一點透視、兩點透視、三點透視、等角透視、魚眼透視⋯⋯以及各種好玩的透視練習法。</p>
+                            <div class="d-flex justify-content-center card-txt-btn">
+                                <a href="#" class="w-100">
+                                    <button class="w-100 bg-white">瞭解課程內容</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                    </div>
+                    <div class="item">
+                        <div class="card  position-relative overflow-hidden" style="width: 100%; ">
+                            <img
+                                src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
+                            <div class="backgroundBookmark position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-h4-wrap">
+                                    <h4 class="card-h4">使用HTML，CSS開發一個網站</h4>
+                                </div>
+                                <div class="text-right card-RM">RM 443.30</div>
+                                <div class="card-divide"></div>
+                                <div class="card-content">
+                                    <div class="card-logo"></div>
+                                    <div class="card-Explan">早期的 HTML 代碼，將網頁中風格 (style) 相關的設定直接內嵌在 HTML
+                                        標籤中，但這樣的做法很難維護網頁，而 CSS 的作用，就是將風格的部分抽離出來，放在獨立的設定檔中。透過修改 CSS
+                                        命令稿，可以同時更動頁面上數個網頁元素的風格，使得網頁維護更容易。</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bg-hahow-dark-orange text-center text-white backgroundTape">
+                                上課囉
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                        <div class="card-txt">
+                            <h3>課程簡介</h3>
+                            <div>
+                                <i class="fas fa-hourglass-start"></i>
+                                <span>課程3小時46分</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-book"></i>
+                                <span>4章節15單元</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-user-tag"></i>
+                                <span>461位同學</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-copy"></i>
+                                <span>2份作業</span>
+                            </div>
+                            <h3 class="my-2">你可以學到的東西</h3>
+                            <p>- 透過電繪的便利性，了解每一種場景透視法產生的原因，讓畫場景時透視更容易上手。123<br>
+                                - 習得一點透視、兩點透視、三點透視、等角透視、魚眼透視⋯⋯以及各種好玩的透視練習法。</p>
+                            <div class="d-flex justify-content-center card-txt-btn">
+                                <a href="#" class="w-100">
+                                    <button class="w-100 bg-white">瞭解課程內容</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+
+                    </div>
+                    <div class="item">
+                        <div class="card  position-relative overflow-hidden" style="width: 100%; ">
+                            <img
+                                src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
+                            <div class="backgroundBookmark position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-h4-wrap">
+                                    <h4 class="card-h4">使用HTML，CSS開發一個網站</h4>
+                                </div>
+                                <div class="text-right card-RM">RM 443.30</div>
+                                <div class="card-divide"></div>
+                                <div class="card-content">
+                                    <div class="card-logo"></div>
+                                    <div class="card-Explan">早期的 HTML 代碼，將網頁中風格 (style) 相關的設定直接內嵌在 HTML
+                                        標籤中，但這樣的做法很難維護網頁，而 CSS 的作用，就是將風格的部分抽離出來，放在獨立的設定檔中。透過修改 CSS
+                                        命令稿，可以同時更動頁面上數個網頁元素的風格，使得網頁維護更容易。</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bg-hahow-dark-orange text-center text-white backgroundTape">
+                                上課囉
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                        <div class="card-txt">
+                            <h3>課程簡介</h3>
+                            <div>
+                                <i class="fas fa-hourglass-start"></i>
+                                <span>課程3小時46分</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-book"></i>
+                                <span>4章節15單元</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-user-tag"></i>
+                                <span>461位同學</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-copy"></i>
+                                <span>2份作業</span>
+                            </div>
+                            <h3 class="my-2">你可以學到的東西</h3>
+                            <p>- 透過電繪的便利性，了解每一種場景透視法產生的原因，讓畫場景時透視更容易上手。123<br>
+                                - 習得一點透視、兩點透視、三點透視、等角透視、魚眼透視⋯⋯以及各種好玩的透視練習法。</p>
+                            <div class="d-flex justify-content-center card-txt-btn">
+                                <a href="#" class="w-100">
+                                    <button class="w-100 bg-white">瞭解課程內容</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+
+                    </div>
+                    <div class="item">
+                        <div class="card  position-relative overflow-hidden" style="width: 100%; ">
+                            <img
+                                src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
+                            <div class="backgroundBookmark position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-h4-wrap">
+                                    <h4 class="card-h4">使用HTML，CSS開發一個網站</h4>
+                                </div>
+                                <div class="text-right card-RM">RM 443.30</div>
+                                <div class="card-divide"></div>
+                                <div class="card-content">
+                                    <div class="card-logo"></div>
+                                    <div class="card-Explan">早期的 HTML 代碼，將網頁中風格 (style) 相關的設定直接內嵌在 HTML
+                                        標籤中，但這樣的做法很難維護網頁，而 CSS 的作用，就是將風格的部分抽離出來，放在獨立的設定檔中。透過修改 CSS
+                                        命令稿，可以同時更動頁面上數個網頁元素的風格，使得網頁維護更容易。</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bg-hahow-dark-orange text-center text-white backgroundTape">
+                                上課囉
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                        <div class="card-txt">
+                            <h3>課程簡介</h3>
+                            <div>
+                                <i class="fas fa-hourglass-start"></i>
+                                <span>課程3小時46分</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-book"></i>
+                                <span>4章節15單元</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-user-tag"></i>
+                                <span>461位同學</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-copy"></i>
+                                <span>2份作業</span>
+                            </div>
+                            <h3 class="my-2">你可以學到的東西</h3>
+                            <p>- 透過電繪的便利性，了解每一種場景透視法產生的原因，讓畫場景時透視更容易上手。123<br>
+                                - 習得一點透視、兩點透視、三點透視、等角透視、魚眼透視⋯⋯以及各種好玩的透視練習法。</p>
+                            <div class="d-flex justify-content-center card-txt-btn">
+                                <a href="#" class="w-100">
+                                    <button class="w-100 bg-white">瞭解課程內容</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+
+                    </div>
+                    <div class="item">
+                        <div class="card  position-relative overflow-hidden" style="width: 100%; ">
+                            <img
+                                src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
+                            <div class="backgroundBookmark position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-h4-wrap">
+                                    <h4 class="card-h4">使用HTML，CSS開發一個網站</h4>
+                                </div>
+                                <div class="text-right card-RM">RM 443.30</div>
+                                <div class="card-divide"></div>
+                                <div class="card-content">
+                                    <div class="card-logo"></div>
+                                    <div class="card-Explan">早期的 HTML 代碼，將網頁中風格 (style) 相關的設定直接內嵌在 HTML
+                                        標籤中，但這樣的做法很難維護網頁，而 CSS 的作用，就是將風格的部分抽離出來，放在獨立的設定檔中。透過修改 CSS
+                                        命令稿，可以同時更動頁面上數個網頁元素的風格，使得網頁維護更容易。</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bg-hahow-dark-orange text-center text-white backgroundTape">
+                                上課囉
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                        <div class="card-txt">
+                            <h3>課程簡介</h3>
+                            <div>
+                                <i class="fas fa-hourglass-start"></i>
+                                <span>課程3小時46分</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-book"></i>
+                                <span>4章節15單元</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-user-tag"></i>
+                                <span>461位同學</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-copy"></i>
+                                <span>2份作業</span>
+                            </div>
+                            <h3 class="my-2">你可以學到的東西</h3>
+                            <p>- 透過電繪的便利性，了解每一種場景透視法產生的原因，讓畫場景時透視更容易上手。123<br>
+                                - 習得一點透視、兩點透視、三點透視、等角透視、魚眼透視⋯⋯以及各種好玩的透視練習法。</p>
+                            <div class="d-flex justify-content-center card-txt-btn">
+                                <a href="#" class="w-100">
+                                    <button class="w-100 bg-white">瞭解課程內容</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                    </div>
+                    <div class="item">
+                        <div class="card  position-relative overflow-hidden" style="width: 100%; ">
+                            <img
+                                src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
+                            <div class="backgroundBookmark position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-h4-wrap">
+                                    <h4 class="card-h4">使用HTML，CSS開發一個網站</h4>
+                                </div>
+                                <div class="text-right card-RM">RM 443.30</div>
+                                <div class="card-divide"></div>
+                                <div class="card-content">
+                                    <div class="card-logo"></div>
+                                    <div class="card-Explan">早期的 HTML 代碼，將網頁中風格 (style) 相關的設定直接內嵌在 HTML
+                                        標籤中，但這樣的做法很難維護網頁，而 CSS 的作用，就是將風格的部分抽離出來，放在獨立的設定檔中。透過修改 CSS
+                                        命令稿，可以同時更動頁面上數個網頁元素的風格，使得網頁維護更容易。</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bg-hahow-dark-orange text-center text-white backgroundTape">
+                                上課囉
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                        <div class="card-txt">
+                            <h3>課程簡介</h3>
+                            <div>
+                                <i class="fas fa-hourglass-start"></i>
+                                <span>課程3小時46分</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-book"></i>
+                                <span>4章節15單元</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-user-tag"></i>
+                                <span>461位同學</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-copy"></i>
+                                <span>2份作業</span>
+                            </div>
+                            <h3 class="my-2">你可以學到的東西</h3>
+                            <p>- 透過電繪的便利性，了解每一種場景透視法產生的原因，讓畫場景時透視更容易上手。123<br>
+                                - 習得一點透視、兩點透視、三點透視、等角透視、魚眼透視⋯⋯以及各種好玩的透視練習法。</p>
+                            <div class="d-flex justify-content-center card-txt-btn">
+                                <a href="#" class="w-100">
+                                    <button class="w-100 bg-white">瞭解課程內容</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                    </div>
+                    <div class="item">
+                        <div class="card  position-relative overflow-hidden" style="width: 100%; ">
+                            <img
+                                src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
+                            <div class="backgroundBookmark position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-h4-wrap">
+                                    <h4 class="card-h4">使用HTML，CSS開發一個網站</h4>
+                                </div>
+                                <div class="text-right card-RM">RM 443.30</div>
+                                <div class="card-divide"></div>
+                                <div class="card-content">
+                                    <div class="card-logo"></div>
+                                    <div class="card-Explan">早期的 HTML 代碼，將網頁中風格 (style) 相關的設定直接內嵌在 HTML
+                                        標籤中，但這樣的做法很難維護網頁，而 CSS 的作用，就是將風格的部分抽離出來，放在獨立的設定檔中。透過修改 CSS
+                                        命令稿，可以同時更動頁面上數個網頁元素的風格，使得網頁維護更容易。</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bg-hahow-dark-orange text-center text-white backgroundTape">
+                                上課囉
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                        <div class="card-txt text-left">
+                            <h3>課程簡介</h3>
+                            <div>
+                                <i class="fas fa-hourglass-start"></i>
+                                <span>課程3小時46分</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-book"></i>
+                                <span>4章節15單元</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-user-tag"></i>
+                                <span>461位同學</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-copy"></i>
+                                <span>2份作業</span>
+                            </div>
+                            <h3 class="my-2">你可以學到的東西</h3>
+                            <p>- 透過電繪的便利性，了解每一種場景透視法產生的原因，讓畫場景時透視更容易上手。123<br>
+                                - 習得一點透視、兩點透視、三點透視、等角透視、魚眼透視⋯⋯以及各種好玩的透視練習法。</p>
+                            <div class="d-flex justify-content-center card-txt-btn">
+                                <a href="#" class="w-100">
+                                    <button class="w-100 bg-white">瞭解課程內容</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 字卡 -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 課程精選 -->
+
+    <!-- 好學生這麼說 -->
+    <div id="student-say" class="container-fuild pt-5 ">
+        <div class="row justify-content-center text-center m-0">
+            <div class="col-8 ">
+                <h2 class="trywatch-h2">Hahow 學生這麼說</h2>
+            </div>
+            <div class="col-8 my-1">
+                <h3 class="trywatch-text">
+                    <span>超過</span>
+                    <span id="studentsay-span" class="mx-2">5000+</span>
+                    <span>則真實評論</span>
+                </h3>
+            </div>
+        </div>
+        <div class="row m-0 justify-content-center pb-4">
+            <div class="col-lg-8 d-flex justify-content-center reading-8 flex-wrap">
+                <div class="col-lg-4 px-2 ">
+                    <div class="comment p-4">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVBAMAAACqMuMoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAqUExURUdwTAC+owC8pAC+owC/nwC+owC/nwC+owC+pAC+pAC+pAC+owC+pAC+pAQrwd4AAAANdFJOUwClRN8h7xBggL9wj89yAOr7AAAAxUlEQVQY0yWOPQrCUBCE1xj/m9gKQnqb1EJAsLYRUlgEBLGIINhYWAhewMZe8AoeQPACKWIUYzF3cXbfFDt8+3berohI8xCKanPRusdOrZ2+WDMY+TlIfuxoCqUVMF5a88f4AwVB6sBJxAMC/eOIirWDUp8ktuZMsyItYEI7I1KqoVC7uljDYpxPFly3xSfhYaAqjVM3I4SO3pKqBY4qydUi/kIV3EA9eYTR2k16al/pqvGMoQV0dM69PaBk078P7OxRP5Q/PJBxjN9F5jIAAAAASUVORK5CYII="
+                            alt="" class="comment-top-img">
+                        自從認識 Hahow，才發現這世界還有這麼多有趣的事可以透過線上課程自學，像是腹語、折氣球，而在專業技能的增進對我幫助也非常大，例如標準字設計、製作網站 UI
+                        等。後來認真研讀了好老師手冊，才知道 Hahow 對於課程製作的嚴謹和品質要求很高，讓我確信只要是 Hahow 出品的線上課程，都有品質保證，因此在線上課程中，我會優先選擇 Hahow。
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVBAMAAACqMuMoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAtUExURUdwTAC9owC+owC/nwC+owC+owC/nwC+pAC+pAC+pAC9owC9owC+pAC+pAC+pN9i5Y0AAAAOdFJOUwCb7yDfPhCAv2CvUG/PuzEMbQAAAMlJREFUGNMljz8OAWEQxZ9gZS0JhVZkC4lG9gQaiVKUqo0jOIGIQiMRJxAnUDiAkIjaFaz1r/DOYN5+U8wvb2bel/cBQb0BK+9cj4D8kKyZOpBvoEDybkMDT9gKI+SENprCHFXh7VQrM/CHmfBAWUjQc6ooEBWn3A0wDrt8Af4iZKoYM3vFqsyPsOdOKCiMYmykjnxaz7l7b2ghZPs6mwVEibxp1VT44pqpfcy7kAMgJvu28pkNY/4ip5aGOJkiUx1hfFVHsJpY/wNR/nhLeHAxeQAAAABJRU5ErkJggg=="
+                            alt="" class="comment-bot-img">
+                        <a href="#" class="comment-a"><img src="me.jpg" alt="" id="user-logo">Victor</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2">
+                    <div class="comment p-4">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVBAMAAACqMuMoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAqUExURUdwTAC+owC8pAC+owC/nwC+owC/nwC+owC+pAC+pAC+pAC+owC+pAC+pAQrwd4AAAANdFJOUwClRN8h7xBggL9wj89yAOr7AAAAxUlEQVQY0yWOPQrCUBCE1xj/m9gKQnqb1EJAsLYRUlgEBLGIINhYWAhewMZe8AoeQPACKWIUYzF3cXbfFDt8+3berohI8xCKanPRusdOrZ2+WDMY+TlIfuxoCqUVMF5a88f4AwVB6sBJxAMC/eOIirWDUp8ktuZMsyItYEI7I1KqoVC7uljDYpxPFly3xSfhYaAqjVM3I4SO3pKqBY4qydUi/kIV3EA9eYTR2k16al/pqvGMoQV0dM69PaBk078P7OxRP5Q/PJBxjN9F5jIAAAAASUVORK5CYII="
+                            alt="" class="comment-top-img">
+                        之前不曾體驗過線上課程，以往求學過程中，下課後都是往補習班跑，然而離開校園後，就不再像以前那樣可以在下課後充實自我了。步入職場後，新人總是滿懷技能，才發現職場時刻猶如戰場，想要不被淘汰，就必須能與時俱進多學新技術，因此開始嘗試線上課程，非常感謝
+                        Hahow，可以讓我持續學習與成長！
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVBAMAAACqMuMoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAtUExURUdwTAC9owC+owC/nwC+owC+owC/nwC+pAC+pAC+pAC9owC9owC+pAC+pAC+pN9i5Y0AAAAOdFJOUwCb7yDfPhCAv2CvUG/PuzEMbQAAAMlJREFUGNMljz8OAWEQxZ9gZS0JhVZkC4lG9gQaiVKUqo0jOIGIQiMRJxAnUDiAkIjaFaz1r/DOYN5+U8wvb2bel/cBQb0BK+9cj4D8kKyZOpBvoEDybkMDT9gKI+SENprCHFXh7VQrM/CHmfBAWUjQc6ooEBWn3A0wDrt8Af4iZKoYM3vFqsyPsOdOKCiMYmykjnxaz7l7b2ghZPs6mwVEibxp1VT44pqpfcy7kAMgJvu28pkNY/4ip5aGOJkiUx1hfFVHsJpY/wNR/nhLeHAxeQAAAABJRU5ErkJggg=="
+                            alt="" class="comment-bot-img">
+                        <a href="#" class="comment-a"><img src="me.jpg" alt="" id="user-logo">Victor</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2">
+                    <div class="comment p-4">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVBAMAAACqMuMoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAqUExURUdwTAC+owC8pAC+owC/nwC+owC/nwC+owC+pAC+pAC+pAC+owC+pAC+pAQrwd4AAAANdFJOUwClRN8h7xBggL9wj89yAOr7AAAAxUlEQVQY0yWOPQrCUBCE1xj/m9gKQnqb1EJAsLYRUlgEBLGIINhYWAhewMZe8AoeQPACKWIUYzF3cXbfFDt8+3berohI8xCKanPRusdOrZ2+WDMY+TlIfuxoCqUVMF5a88f4AwVB6sBJxAMC/eOIirWDUp8ktuZMsyItYEI7I1KqoVC7uljDYpxPFly3xSfhYaAqjVM3I4SO3pKqBY4qydUi/kIV3EA9eYTR2k16al/pqvGMoQV0dM69PaBk078P7OxRP5Q/PJBxjN9F5jIAAAAASUVORK5CYII="
+                            alt="" class="comment-top-img">
+                        謝謝可愛的 Hahow
+                        吉祥物蛙蛙，在我大學生活感到迷茫的時候，向著我伸出了帶有希望曙光的援手，在這裡我重新拾起對學習的熱情，而獲得知識的範圍也不再僅限於單一領域，是真正地、發自內心地去學習自己熱愛的一切事物。因此我推薦各位朋友，如果你有什麼想學卻還沒開始的事情的話，試著在
+                        Hahow 挖寶看看吧！
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVBAMAAACqMuMoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAtUExURUdwTAC9owC+owC/nwC+owC+owC/nwC+pAC+pAC+pAC9owC9owC+pAC+pAC+pN9i5Y0AAAAOdFJOUwCb7yDfPhCAv2CvUG/PuzEMbQAAAMlJREFUGNMljz8OAWEQxZ9gZS0JhVZkC4lG9gQaiVKUqo0jOIGIQiMRJxAnUDiAkIjaFaz1r/DOYN5+U8wvb2bel/cBQb0BK+9cj4D8kKyZOpBvoEDybkMDT9gKI+SENprCHFXh7VQrM/CHmfBAWUjQc6ooEBWn3A0wDrt8Af4iZKoYM3vFqsyPsOdOKCiMYmykjnxaz7l7b2ghZPs6mwVEibxp1VT44pqpfcy7kAMgJvu28pkNY/4ip5aGOJkiUx1hfFVHsJpY/wNR/nhLeHAxeQAAAABJRU5ErkJggg=="
+                            alt="" class="comment-bot-img">
+                        <a href="#" class="comment-a"><img src="me.jpg" alt="" id="user-logo">Victor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+
+    <!-- 好學生這麼說 -->
     <!-- 延伸閱讀 -->
     <div class="container-fuild reading">
         <div class="row justify-content-center m-0">
@@ -802,6 +1563,8 @@
             }
         });
         //輪盤
+
+
     </script>
 </body>
 
