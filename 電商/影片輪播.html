@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <style>
+        .content {
+            width: 636px;
+        }
+    </style>
+</head>
+<body>
+    <div class="owl-carousel owl-theme">
+        <div class="item-video">
+            <iframe id="player1" width="636" height="356" src="https://www.youtube.com/embed/TCaM1Tl01lQ?enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis praesentium tempora blanditiis veniam
+                    dignissimos unde perferendis ipsa nobis pariatur dolores quo id voluptatum, labore molestias
+                    repudiandae magni. Esse, rerum. Suscipit!</p>
+            </div>
+        </div>
+        <div class="item-video">
+            <iframe id="player2" width="636" height="356" src="https://www.youtube.com/embed/TCaM1Tl01lQ?enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis praesentium tempora blanditiis veniam
+                    dignissimos unde perferendis ipsa nobis pariatur dolores quo id voluptatum, labore molestias
+                    repudiandae magni. Esse, rerum. Suscipit!</p>
+            </div>
+        </div>
+        <div class="item-video">
+            <iframe id="player3" width="636" height="356" src="https://www.youtube.com/embed/TCaM1Tl01lQ?enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis praesentium tempora blanditiis veniam
+                    dignissimos unde perferendis ipsa nobis pariatur dolores quo id voluptatum, labore molestias
+                    repudiandae magni. Esse, rerum. Suscipit!</p>
+            </div>
+        </div>
+        <div class="item-video">
+            <iframe id="player4" width="636" height="356" src="https://www.youtube.com/embed/TCaM1Tl01lQ?enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis praesentium tempora blanditiis veniam
+                    dignissimos unde perferendis ipsa nobis pariatur dolores quo id voluptatum, labore molestias
+                    repudiandae magni. Esse, rerum. Suscipit!</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            items: 3,
+            merge: true,
+            loop: true,
+            margin: 10,
+            video: true,
+            lazyLoad: true,
+            center: true,
+            autoWidth: true,
+            nav: true,
+        })
+
+        $('.owl-prev').click(function () {
+            stopVideo();
+            console.log('aaaa')
+        })
+        // Go to the previous item
+        $('.owl-next').click(function () {
+            stopVideo();
+            // With optional speed parameter
+            // Parameters has to be in square bracket '[]'
+            console.log('bbbb')
+        })
+        $('.owl-dot').click(function (event) {
+            event.currentTarget.click();
+            stopVideo();
+            console.log('cccc')
+        })
+        function stopVideo() {
+            jQuery("iframe").each(function () {
+                jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+            });
+            document.querySelector('.center>.item-video>iframe').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
+        }
+    </script>
+</body>
+</html>

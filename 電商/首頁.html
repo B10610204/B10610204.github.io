@@ -529,6 +529,35 @@
     }
 
     /* 哥哥卡片 */
+    
+    /* 影片 */
+   
+    
+    .content h4 {
+        font-size: 8px;
+    }
+
+    .content a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.65);
+    }
+
+    .fa-star {
+        color: rgb(255, 177, 21);
+    }
+    .video-carousel{
+        background-color: rgb(243, 243, 241);
+    }
+    .content {
+        width: 636px;
+        color: rgb(245, 126, 16);
+    }
+    .item-video {
+        border-radius: 15px;
+        background-color: white;
+    }
+
+    /* 影片  */
 
     @media screen and (max-width:992px) {
 
@@ -839,7 +868,7 @@
     <!-- 第二塊 -->
 
     <!-- 輪盤一 -->
-    <div class="owl-carousel owl-theme pb-5">
+    <div class="owl-carousel owl-theme pb-5 auto-carousel">
         <a href="#">
             <div class="item">
                 <img src="https://storage.googleapis.com/hh-static/banner_2021hahowday_20210519/2021hahowday_l.png"
@@ -902,6 +931,88 @@
         </div>
     </div>
     <!-- 第3塊 -->
+
+     <!-- 影片 -->
+     <div class="owl-carousel owl-theme video-carousel">
+        <div class="item-video">
+            <iframe id="player1" width="636" height="356" src="https://www.youtube.com/embed/TCaM1Tl01lQ?enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="content text-center">
+                <h4 class="my-2">網頁</h4>
+                <a href="#">設計網頁-網頁工程師的設計實戰</a>
+                <div>
+                    <a href="#">
+                        <span>4.87</span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item-video">
+            <iframe id="player2" width="636" height="356" src="https://www.youtube.com/embed/TCaM1Tl01lQ?enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="content text-center">
+                <h4 class="my-2">網頁</h4>
+                <a href="#">設計網頁-網頁工程師的設計實戰</a>
+                <div>
+                    <a href="#">
+                        <span>4.87</span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item-video">
+            <iframe id="player3" width="636" height="356" src="https://www.youtube.com/embed/TCaM1Tl01lQ?enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="content text-center">
+                <h4 class="my-2">網頁</h4>
+                <a href="#">設計網頁-網頁工程師的設計實戰</a>
+                <div>
+                    <a href="#">
+                        <span>4.87</span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item-video">
+            <iframe id="player4" width="636" height="356" src="https://www.youtube.com/embed/TCaM1Tl01lQ?enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="content text-center">
+                <h4 class="my-2">網頁</h4>
+                <a href="#">設計網頁-網頁工程師的設計實戰</a>
+                <div>
+                    <a href="#">
+                        <span>4.87</span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 影片 -->
+
     <!-- 課程精選 -->
     <div class="container-fuild py-5">
         <div class="row justify-content-center text-center m-0">
@@ -915,7 +1026,7 @@
                 </h3>
             </div>
             <div class="col-8 course-8">
-                <div class="owl-carousel  owl-theme">
+                <div class="owl-carousel  owl-theme auto-carousel">
 
                     <div class="item">
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
@@ -1533,9 +1644,9 @@
         </div>
     </div>
     <!-- 底部 -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
@@ -1565,7 +1676,7 @@
         }()
         //navbar
         //輪盤
-        var owl = $('.owl-carousel');
+        var owl = $('.auto-carousel');
 
         owl.owlCarousel({
             items: 3,/*顯示張數*/
@@ -1589,7 +1700,48 @@
             }
         });
         //輪盤
+        // 影片
+        
+        $('.video-carousel').owlCarousel({
+            items: 3,
+            merge: true,
+            loop: true,
+            margin: 10,
+            video: true,
+            lazyLoad: true,
+            center: true,
+            autoWidth: true,
+            nav: true,
+        })
 
+        $('.owl-prev').click(function (event) {
+            event.currentTarget.click();
+            event.currentTarget.click();
+            stopVideo();
+            console.log('aaaa')
+        })
+        // Go to the previous item
+        $('.owl-next').click(function () {
+            event.currentTarget.click();
+            event.currentTarget.click();
+            stopVideo();
+            // With optional speed parameter
+            // Parameters has to be in square bracket '[]'
+            console.log('bbbb')
+        })
+        $('.owl-dot').click(function (event) {
+            event.currentTarget.click();
+            stopVideo();
+            console.log('cccc')
+        })
+        function stopVideo() {
+            jQuery("iframe").each(function () {
+                jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '')
+                console.warn(this[0])
+            });
+            document.querySelector('.center>.item-video>iframe').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '')
+        }
+        // 影片
 
     </script>
 </body>
