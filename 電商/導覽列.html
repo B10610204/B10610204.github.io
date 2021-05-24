@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <style>
+        /* ----導覽列------ */
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .bg-gray {
+            background-color: rgb(248, 248, 248);
+        }
+
+        .grow-0 {
+            flex-grow: 0;
+        }
+
+        #Homepage-logo {
+            width: 135px;
+            height: 33px;
+        }
+
+        #Recruit-logo {
+            width: 65px;
+            height: 43px;
+        }
+
+        #nav-space {
+            width: 200px;
+        }
+
+        #user-menu {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            /* background-color: khaki; */
+
+        }
+
+        #user-logo {
+            border-radius: 30px;
+            width: 25px;
+            height: 25px;
+        }
+
+        .user-logo-content {
+            left: -100px
+        }
+
+        .user-notice {
+            left: -50px
+        }
+
+        /* ----導覽列------ */
+    </style>
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+        <div class="nav-log-wrap">
+            <a href="#"><img id="Homepage-logo" src="https://hahow.in/static/media/logo-black.59fdbe30.svg" alt=""></a>
+            <a href="#"><img id="Recruit-logo" src="https://hahow.in/static/images/joinus/2018hiring.svg" alt=""></a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 下拉選單有2層 -->
+        <div class="collapse navbar-collapse  grow-0" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-th-large"></i>
+                        探索課程
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="dropright">
+                            <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown">
+                                C#
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Posts
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Groups
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Projects
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Files
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Subscribers
+                                </a>
+                            </div>
+                        </li>
+                        <li class="dropright">
+                            <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown">
+                                CSS
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Posts
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Groups
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Projects
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Files
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Subscribers
+                                </a>
+                            </div>
+                        </li>
+                        <li class="dropright">
+                            <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown">
+                                Javascript
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Posts
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Groups
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Projects
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Files
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Subscribers
+                                </a>
+                            </div>
+                        </li>
+                        <li class="dropright">
+                            <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown">
+                                Mvc
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Posts
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Groups
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Projects
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Files
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Subscribers
+                                </a>
+                            </div>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </ul>
+                </li>
+                <!-- 沒有下拉選單 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-pencil-alt"></i>我要開課</a>
+                </li>
+            </ul>
+            <!-- 搜尋列 -->
+            <form class="form-inline my-2 my-lg-0 ">
+                <i class="fas fa-search px-2"></i>
+                <input class="form-control mr-sm-2" type="search" placeholder="課程搜尋" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <!-- 移動距離就創一個空的div -->
+        <!-- <div id="nav-space"></div> -->
+        <!-- <div id="nav-space"></div> -->
+
+        <div class="collapse navbar-collapse  grow-0" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">我的課程</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        123 <br> 123 <br> 123 <br>123 <br>123 <br>123 <br>123 <br>123 <br>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="far fa-bell"></i>
+                    </a>
+                    <div class="dropdown-menu user-notice" aria-labelledby="navbarDropdown">
+                        123 <br> 123 <br> 123 <br>123 <br>123 <br>123 <br>123 <br>123 <br>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div id="user-menu"><img src="me.jpg" alt="" id="user-logo"></div>
+                    </a>
+                    <div class="dropdown-menu user-logo-content" aria-labelledby="navbarDropdown">
+                        123 <br> 123 <br> 123 <br>123 <br>123 <br>123 <br>123 <br>123 <br>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 導覽列 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+</body>
+
+</html>
