@@ -12,12 +12,13 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./card.css">
 </head>
 <style>
-   /* ----導覽列------ */
+    /* ----導覽列------ */
     * {
         padding: 0;
-        margin: 0; 
+        margin: 0;
         list-style: none;
     }
 
@@ -308,9 +309,9 @@
     #student-say {
         background-color: #e6eff0;
     }
-    
+
     .comment-p {
-        
+
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -331,7 +332,7 @@
         bottom: 5px;
         right: 24px;
     }
-    
+
 
     .comment-a {
 
@@ -355,7 +356,7 @@
     .owl-carousel .owl-item,
     .owl-carousel .owl-wrapper {
         -webkit-transform: none
-    } 
+    }
 
     .owl-nav {
         text-align: center;
@@ -400,9 +401,11 @@
         border: 3px solid rgb(243, 243, 241);
         border-radius: 12px;
     }
-    .card-3{
+
+    .card-3 {
         left: -82%;
     }
+
     .card-txt h3 {
         font-size: 14px;
     }
@@ -462,7 +465,7 @@
         transform: scale(1.2);
     }
 
-    .backgroundBookmark {
+    .backgroundBookmark-me {
         background-color: #fff;
         width: 40px;
         height: 40px;
@@ -473,12 +476,12 @@
         line-height: 2.5;
     }
 
-    .backgroundBookmark:hover {
+    .backgroundBookmark-me:hover {
         background-color: #fa8b00;
 
     }
 
-    .backgroundBookmark:hover i {
+    .backgroundBookmark-me:hover i {
         color: white;
     }
 
@@ -486,7 +489,7 @@
         color: #fa8b00;
     }
 
-    .card:hover .backgroundBookmark {
+    .card:hover .backgroundBookmark-me {
         bottom: 53%;
     }
 
@@ -530,8 +533,8 @@
 
     /* 哥哥卡片 */
     /* 影片 */
-  
- 
+
+
     .content h4 {
         font-size: 8px;
     }
@@ -544,13 +547,16 @@
     .fa-star {
         color: rgb(255, 177, 21);
     }
-    .video-carousel{
+
+    .video-carousel {
         background-color: rgb(243, 243, 241);
     }
+
     .content {
         width: 636px;
         color: rgb(245, 126, 16);
     }
+
     .item-video {
         border-radius: 15px;
         background-color: white;
@@ -558,7 +564,15 @@
 
     /* 影片 */
 
+    @media screen and (min-width:992px) {
+        .container-md {
+            max-width: 62%;
+            padding: 0;
+        }
+    }
+
     @media screen and (max-width:992px) {
+
 
         /* 頁尾 */
         .footer-block {
@@ -627,6 +641,7 @@
         .comment-a {
             bottom: 0px;
         }
+
         /* 好學生評論 */
         /* 課程精選 */
         .item:hover .card-txt {
@@ -637,7 +652,7 @@
             visibility: hidden;
         }
 
-        .card:hover .backgroundBookmark {
+        .card:hover .backgroundBookmark-me {
             bottom: 63%;
         }
 
@@ -840,7 +855,7 @@
                 <img id="search-right-pic" src="右圖底部.jpg" alt="">
                 <a href="#"><img id="search-right-a-pic" src="超連結圖.jpg" alt=""></a>
                 <img id="mascot" src="吉祥物.jpg" alt="">
-    
+
             </div>
         </div>
     </div>
@@ -1024,13 +1039,13 @@
                 </h3>
             </div>
             <div class="col-8 course-8">
-                <div class="owl-carousel  owl-theme auto-carousel">
+                <div class="owl-carousel  owl-theme  advertising-carousel">
 
                     <div class="item">
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1085,7 +1100,7 @@
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1139,7 +1154,7 @@
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1194,7 +1209,7 @@
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1249,7 +1264,7 @@
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1304,7 +1319,7 @@
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1358,7 +1373,7 @@
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1412,7 +1427,7 @@
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1466,7 +1481,7 @@
                         <div class="card  position-relative overflow-hidden" style="width: 100%; ">
                             <img
                                 src="https://hahow-production.imgix.net/5f4c73b1dccd653e568b9b9d?w=300&auto=format&sat=0&s=a843398efa5719f35494261461bf392a">
-                            <div class="backgroundBookmark position-absolute text-center">
+                            <div class="backgroundBookmark-me position-absolute text-center">
                                 <i class="far fa-bookmark hahow-orange line-height-40"></i>
                             </div>
                             <div class="card-body">
@@ -1545,7 +1560,8 @@
                             alt="" class="comment-top-img">
                         <p class="comment-p">
                             自從認識 Hahow，才發現這世界還有這麼多有趣的事可以透過線上課程自學，像是腹語、折氣球，而在專業技能的增進對我幫助也非常大，例如標準字設計、製作網站 UI
-                            等。後來認真研讀了好老師手冊，才知道 Hahow 對於課程製作的嚴謹和品質要求很高，讓我確信只要是 Hahow 出品的線上課程，都有品質保證，因此在線上課程中，我會優先選擇 Hahow。
+                            等。後來認真研讀了好老師手冊，才知道 Hahow 對於課程製作的嚴謹和品質要求很高，讓我確信只要是 Hahow 出品的線上課程，都有品質保證，因此在線上課程中，我會優先選擇
+                            Hahow。
                         </p>
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVBAMAAACqMuMoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAtUExURUdwTAC9owC+owC/nwC+owC+owC/nwC+pAC+pAC+pAC9owC9owC+pAC+pAC+pN9i5Y0AAAAOdFJOUwCb7yDfPhCAv2CvUG/PuzEMbQAAAMlJREFUGNMljz8OAWEQxZ9gZS0JhVZkC4lG9gQaiVKUqo0jOIGIQiMRJxAnUDiAkIjaFaz1r/DOYN5+U8wvb2bel/cBQb0BK+9cj4D8kKyZOpBvoEDybkMDT9gKI+SENprCHFXh7VQrM/CHmfBAWUjQc6ooEBWn3A0wDrt8Af4iZKoYM3vFqsyPsOdOKCiMYmykjnxaz7l7b2ghZPs6mwVEibxp1VT44pqpfcy7kAMgJvu28pkNY/4ip5aGOJkiUx1hfFVHsJpY/wNR/nhLeHAxeQAAAABJRU5ErkJggg=="
                             alt="" class="comment-bot-img">
@@ -1586,6 +1602,726 @@
 
 
     <!-- 好學生這麼說 -->
+
+    <!-- 猜你想學 -->
+    <div class="container-md">
+        <div class="row justify-content-lg-between">
+            <div class="recommend-title-wrap d-flex">
+                <img src="https://hahow.in/static/images/homepage/icon-suggestion.svg" alt=""
+                    class="recommend-img px-15">
+                <h2 class=" card-h2-title">猜你想學</h2>
+            </div>
+            <a href="#" class="more-class">更多熱門課程<i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card my-5">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12">
+                            <div class="card-title-image position-relative">
+                                <div class="
+                        backgroundPhoto
+                        position-absolute
+                        rounded-circle
+                        bg-white
+                      ">
+                                    <img src="https://0.share.photo.xuite.net/donna900920/104fe81/12711717/639651164_m.jpg"
+                                        alt="" class="rounded-circle position-absolute center" id="photoImag" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-2 col-2 overflow-hidden mb-2">
+                            <img src="https://images.api.hahow.in/images/5f4c73b1dccd653e568b9b9d?width=300"
+                                class="card-img-top" />
+                            <div class="
+                    position-absolute
+                    bg-hahow-dark-green
+                    text-center text-white
+                    backgroundTape
+                  ">
+                                上課囉
+                            </div>
+                            <div class="backgroundBookmark backgroundBookmarkMove position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                            <h4 class="card-title text-justify font-weight-normal text-secondary">
+                                Java 工程師必備！Spring Boot 零基
+                            </h4>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-3 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="star-show">
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                </span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-2 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="couse-time-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-time">578</span>分鐘
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-4 col-6 mb-2">
+                            <span class="card-text text-black-50 mr-4">
+                                <span class="course-people-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-people">260</span>人
+                            </span>
+                            <span class="card-text hahow-dark-green classPrice">
+                                NT$<span>3,200</span>
+                            </span>
+                        </div>
+                        <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-6 mb-2 text-right">
+                            <span class="backgroundBookmark-sm d-inline-block text-center mx-3">
+                                <i class="far fa-bookmark hahow-orange line-height-30"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-bottom bg-hahow-dark-green"></div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card my-5">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12">
+                            <div class="card-title-image position-relative">
+                                <div class="
+                        backgroundPhoto
+                        position-absolute
+                        rounded-circle
+                        bg-white
+                      ">
+                                    <img src="https://0.share.photo.xuite.net/donna900920/104fe81/12711717/639651164_m.jpg"
+                                        alt="" class="rounded-circle position-absolute center" id="photoImag" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-2 col-2 overflow-hidden mb-2">
+                            <img src="https://images.api.hahow.in/images/5f4c73b1dccd653e568b9b9d?width=300"
+                                class="card-img-top" />
+                            <div class="
+                    position-absolute
+                    bg-hahow-dark-green
+                    text-center text-white
+                    backgroundTape
+                  ">
+                                上課囉
+                            </div>
+                            <div class="backgroundBookmark backgroundBookmarkMove position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                            <h4 class="card-title text-justify font-weight-normal text-secondary">
+                                Java 工程師必備！Spring Boot 零基
+                            </h4>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-3 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="star-show">
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                </span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-2 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="couse-time-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-time">578</span>分鐘
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-4 col-6 mb-2">
+                            <span class="card-text text-black-50 mr-4">
+                                <span class="course-people-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-people">260</span>人
+                            </span>
+                            <span class="card-text hahow-dark-green classPrice">
+                                NT$<span>3,200</span>
+                            </span>
+                        </div>
+                        <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-6 mb-2 text-right">
+                            <span class="backgroundBookmark-sm d-inline-block text-center mx-3">
+                                <i class="far fa-bookmark hahow-orange line-height-30"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-bottom bg-hahow-dark-green"></div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card my-5">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12">
+                            <div class="card-title-image position-relative">
+                                <div class="
+                        backgroundPhoto
+                        position-absolute
+                        rounded-circle
+                        bg-white
+                      ">
+                                    <img src="https://0.share.photo.xuite.net/donna900920/104fe81/12711717/639651164_m.jpg"
+                                        alt="" class="rounded-circle position-absolute center" id="photoImag" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-2 col-2 overflow-hidden mb-2">
+                            <img src="https://images.api.hahow.in/images/5f4c73b1dccd653e568b9b9d?width=300"
+                                class="card-img-top" />
+                            <div class="
+                    position-absolute
+                    bg-hahow-dark-green
+                    text-center text-white
+                    backgroundTape
+                  ">
+                                上課囉
+                            </div>
+                            <div class="backgroundBookmark backgroundBookmarkMove position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                            <h4 class="card-title text-justify font-weight-normal text-secondary">
+                                Java 工程師必備！Spring Boot 零基
+                            </h4>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-3 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="star-show">
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                </span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-2 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="couse-time-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-time">578</span>分鐘
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-4 col-6 mb-2">
+                            <span class="card-text text-black-50 mr-4">
+                                <span class="course-people-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-people">260</span>人
+                            </span>
+                            <span class="card-text hahow-dark-green classPrice">
+                                NT$<span>3,200</span>
+                            </span>
+                        </div>
+                        <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-6 mb-2 text-right">
+                            <span class="backgroundBookmark-sm d-inline-block text-center mx-3">
+                                <i class="far fa-bookmark hahow-orange line-height-30"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-bottom bg-hahow-dark-green"></div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card my-5">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12">
+                            <div class="card-title-image position-relative">
+                                <div class="
+                        backgroundPhoto
+                        position-absolute
+                        rounded-circle
+                        bg-white
+                      ">
+                                    <img src="https://0.share.photo.xuite.net/donna900920/104fe81/12711717/639651164_m.jpg"
+                                        alt="" class="rounded-circle position-absolute center" id="photoImag" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-2 col-2 overflow-hidden mb-2">
+                            <img src="https://images.api.hahow.in/images/5f4c73b1dccd653e568b9b9d?width=300"
+                                class="card-img-top" />
+                            <div class="
+                    position-absolute
+                    bg-hahow-dark-green
+                    text-center text-white
+                    backgroundTape
+                  ">
+                                上課囉
+                            </div>
+                            <div class="backgroundBookmark backgroundBookmarkMove position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                            <h4 class="card-title text-justify font-weight-normal text-secondary">
+                                Java 工程師必備！Spring Boot 零基
+                            </h4>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-3 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="star-show">
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                </span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-2 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="couse-time-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-time">578</span>分鐘
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-4 col-6 mb-2">
+                            <span class="card-text text-black-50 mr-4">
+                                <span class="course-people-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-people">260</span>人
+                            </span>
+                            <span class="card-text hahow-dark-green classPrice">
+                                NT$<span>3,200</span>
+                            </span>
+                        </div>
+                        <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-6 mb-2 text-right">
+                            <span class="backgroundBookmark-sm d-inline-block text-center mx-3">
+                                <i class="far fa-bookmark hahow-orange line-height-30"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-bottom bg-hahow-dark-green"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 猜你想學 -->
+    <!-- 本週熱門課程 -->
+    <div class="container-md">
+        <div class="row justify-content-lg-between">
+            <div class="recommend-title-wrap d-flex">
+                <img src="https://hahow.in/static/images/homepage/popular.png" alt=""
+                    class="recommend-img px-15">
+                <h2 class=" card-h2-title">本週熱門課程</h2>
+            </div>
+            <a href="#" class="more-class">更多熱門課程<i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card my-5">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12">
+                            <div class="card-title-image position-relative">
+                                <div class="
+                        backgroundPhoto
+                        position-absolute
+                        rounded-circle
+                        bg-white
+                      ">
+                                    <img src="https://0.share.photo.xuite.net/donna900920/104fe81/12711717/639651164_m.jpg"
+                                        alt="" class="rounded-circle position-absolute center" id="photoImag" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-2 col-2 overflow-hidden mb-2">
+                            <img src="https://images.api.hahow.in/images/5f4c73b1dccd653e568b9b9d?width=300"
+                                class="card-img-top" />
+                            <div class="
+                    position-absolute
+                    bg-hahow-dark-green
+                    text-center text-white
+                    backgroundTape
+                  ">
+                                上課囉
+                            </div>
+                            <div class="backgroundBookmark backgroundBookmarkMove position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                            <h4 class="card-title text-justify font-weight-normal text-secondary">
+                                Java 工程師必備！Spring Boot 零基
+                            </h4>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-3 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="star-show">
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                </span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-2 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="couse-time-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-time">578</span>分鐘
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-4 col-6 mb-2">
+                            <span class="card-text text-black-50 mr-4">
+                                <span class="course-people-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-people">260</span>人
+                            </span>
+                            <span class="card-text hahow-dark-green classPrice">
+                                NT$<span>3,200</span>
+                            </span>
+                        </div>
+                        <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-6 mb-2 text-right">
+                            <span class="backgroundBookmark-sm d-inline-block text-center mx-3">
+                                <i class="far fa-bookmark hahow-orange line-height-30"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-bottom bg-hahow-dark-green"></div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card my-5">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12">
+                            <div class="card-title-image position-relative">
+                                <div class="
+                        backgroundPhoto
+                        position-absolute
+                        rounded-circle
+                        bg-white
+                      ">
+                                    <img src="https://0.share.photo.xuite.net/donna900920/104fe81/12711717/639651164_m.jpg"
+                                        alt="" class="rounded-circle position-absolute center" id="photoImag" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-2 col-2 overflow-hidden mb-2">
+                            <img src="https://images.api.hahow.in/images/5f4c73b1dccd653e568b9b9d?width=300"
+                                class="card-img-top" />
+                            <div class="
+                    position-absolute
+                    bg-hahow-dark-green
+                    text-center text-white
+                    backgroundTape
+                  ">
+                                上課囉
+                            </div>
+                            <div class="backgroundBookmark backgroundBookmarkMove position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                            <h4 class="card-title text-justify font-weight-normal text-secondary">
+                                Java 工程師必備！Spring Boot 零基
+                            </h4>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-3 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="star-show">
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                </span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-2 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="couse-time-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-time">578</span>分鐘
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-4 col-6 mb-2">
+                            <span class="card-text text-black-50 mr-4">
+                                <span class="course-people-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-people">260</span>人
+                            </span>
+                            <span class="card-text hahow-dark-green classPrice">
+                                NT$<span>3,200</span>
+                            </span>
+                        </div>
+                        <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-6 mb-2 text-right">
+                            <span class="backgroundBookmark-sm d-inline-block text-center mx-3">
+                                <i class="far fa-bookmark hahow-orange line-height-30"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-bottom bg-hahow-dark-green"></div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card my-5">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12">
+                            <div class="card-title-image position-relative">
+                                <div class="
+                        backgroundPhoto
+                        position-absolute
+                        rounded-circle
+                        bg-white
+                      ">
+                                    <img src="https://0.share.photo.xuite.net/donna900920/104fe81/12711717/639651164_m.jpg"
+                                        alt="" class="rounded-circle position-absolute center" id="photoImag" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-2 col-2 overflow-hidden mb-2">
+                            <img src="https://images.api.hahow.in/images/5f4c73b1dccd653e568b9b9d?width=300"
+                                class="card-img-top" />
+                            <div class="
+                    position-absolute
+                    bg-hahow-dark-green
+                    text-center text-white
+                    backgroundTape
+                  ">
+                                上課囉
+                            </div>
+                            <div class="backgroundBookmark backgroundBookmarkMove position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                            <h4 class="card-title text-justify font-weight-normal text-secondary">
+                                Java 工程師必備！Spring Boot 零基
+                            </h4>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-3 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="star-show">
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                </span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-2 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="couse-time-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-time">578</span>分鐘
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-4 col-6 mb-2">
+                            <span class="card-text text-black-50 mr-4">
+                                <span class="course-people-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-people">260</span>人
+                            </span>
+                            <span class="card-text hahow-dark-green classPrice">
+                                NT$<span>3,200</span>
+                            </span>
+                        </div>
+                        <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-6 mb-2 text-right">
+                            <span class="backgroundBookmark-sm d-inline-block text-center mx-3">
+                                <i class="far fa-bookmark hahow-orange line-height-30"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-bottom bg-hahow-dark-green"></div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card my-5">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12">
+                            <div class="card-title-image position-relative">
+                                <div class="
+                        backgroundPhoto
+                        position-absolute
+                        rounded-circle
+                        bg-white
+                      ">
+                                    <img src="https://0.share.photo.xuite.net/donna900920/104fe81/12711717/639651164_m.jpg"
+                                        alt="" class="rounded-circle position-absolute center" id="photoImag" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-2 col-2 overflow-hidden mb-2">
+                            <img src="https://images.api.hahow.in/images/5f4c73b1dccd653e568b9b9d?width=300"
+                                class="card-img-top" />
+                            <div class="
+                    position-absolute
+                    bg-hahow-dark-green
+                    text-center text-white
+                    backgroundTape
+                  ">
+                                上課囉
+                            </div>
+                            <div class="backgroundBookmark backgroundBookmarkMove position-absolute text-center">
+                                <i class="far fa-bookmark hahow-orange line-height-40"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                            <h4 class="card-title text-justify font-weight-normal text-secondary">
+                                Java 工程師必備！Spring Boot 零基
+                            </h4>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-3 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="star-show">
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                    <i class="fas fa-star star-gray position-relative">
+                                        <i class="fas fa-star star-yellow position-absolute star-display"></i>
+                                    </i>
+                                </span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-2 col-6 mb-2">
+                            <span class="card-text text-black-50">
+                                <span class="couse-time-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-time">578</span>分鐘
+                            </span>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-4 col-6 mb-2">
+                            <span class="card-text text-black-50 mr-4">
+                                <span class="course-people-before">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <span class="course-people">260</span>人
+                            </span>
+                            <span class="card-text hahow-dark-green classPrice">
+                                NT$<span>3,200</span>
+                            </span>
+                        </div>
+                        <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-6 mb-2 text-right">
+                            <span class="backgroundBookmark-sm d-inline-block text-center mx-3">
+                                <i class="far fa-bookmark hahow-orange line-height-30"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-bottom bg-hahow-dark-green"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 本週熱門課程 -->
+
     <!-- 延伸閱讀 -->
     <div class="container-fuild reading">
         <div class="row justify-content-center m-0">
@@ -1738,9 +2474,9 @@
             loop: true,//環形
             margin: 20,
             nav: true,
-            // autoplay: true,//自動撥放true false
-            // autoplayTimeout: 1000,//自動播放超時
-            // autoplayHoverPause: true,//自動播放懸停暫停
+            autoplay: true,//自動撥放true false
+            autoplayTimeout: 1000,//自動播放超時
+            autoplayHoverPause: true,//自動播放懸停暫停
             responsive: {
                 0: {
                     items: 1
@@ -1768,17 +2504,45 @@
             autoWidth: true,
             nav: true,
         })
+       //課程精選
+       var owl_advertising = $('.advertising-carousel');
+       owl_advertising.owlCarousel({
+            items: 3,/*顯示張數*/
+            loop: true,//環形
+            margin: 20,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                }
 
-        $('.owl-prev').click(function (event) {
+            }
+        });
+
+        $('.advertising-carousel .owl-prev').click(function (event) {
             event.currentTarget.click();
             event.currentTarget.click();
+       })
+       
+       $('.advertising-carousel .owl-next').click(function (event) {
+            event.currentTarget.click();
+            event.currentTarget.click();
+       })
+       //課程精選
+        $('.video-carousel .owl-prev').click(function (event) {
+           
             stopVideo();
             console.log('aaaa')
         })
         // Go to the previous item
-        $('.owl-next').click(function () {
-            event.currentTarget.click();
-            event.currentTarget.click();
+        $('.video-carousel .owl-next').click(function () {
+          
             stopVideo();
             // With optional speed parameter
             // Parameters has to be in square bracket '[]'
